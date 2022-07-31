@@ -1,0 +1,390 @@
+.menu-overlay {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  z-index: 10;
+
+  .overflow {
+    position: relative;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 1;
+    height: 100%;
+  }
+
+  &.menu-open {
+    display: block;
+  }
+
+  .navigation-holder {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    float: left;
+    background: rgba(0,0,0,.8);
+    opacity: 1;
+
+    .second-level-menu {
+      &.menu-addons-holder {
+        display: none;
+      }
+
+      li {
+        a {
+          text-transform: none;
+          position: relative;
+          display: block;
+          z-index: 1;
+          line-height: 18px;
+          color: #505f67;
+        }
+      }
+    }
+
+    &.lvl-2-active {
+      opacity: 1;
+      visibility: visible;
+      width: 100%;
+      left: 0;
+      z-index: 3;
+
+      &+.menu-addons-holder {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+
+    }
+
+    .vertical-align {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-left: auto;
+      margin-right: auto;
+
+      .main-menu {
+        .main-nav {
+          font-size: 22px;
+          line-height: 36px;
+          font-weight: 600;
+          li {
+            padding: 15px 0;
+            cursor: pointer;
+            position: relative;
+
+            span {
+              display: block;
+              width: 40px;
+              height: 40px;
+              position: absolute;
+              right: 0;
+              cursor: pointer;
+              z-index: 2;
+              margin-top: -20px;
+              top: 50%;
+              &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 15px;
+                height: 4px;
+                margin: -2px 0 0 -8px;
+                background: #1b1b1b;
+                transform: rotate(45deg);
+                margin-top: -7px;
+              }
+
+              &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 15px;
+                height: 4px;
+                margin: -2px 0 0 -8px;
+                background: #1b1b1b;
+                transform: rotate(-45deg);
+                margin-top: 1px;
+              }
+            }
+
+            a {
+              text-transform: uppercase;
+              position: relative;
+              color: #1b1b1b;
+
+              &:hover {
+                color: @page-color;
+              }
+
+              &.home {
+                color: #808285;
+              }
+            }
+          }
+
+          ul {
+            display: none;
+          }
+        }
+      }
+
+    }
+
+    .layer {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      transition: all .4s ease-out;
+
+      &.layer1 {
+        width: 50%;
+        height: 100%;
+        padding: 0 100px;
+        background: white;
+      }
+
+      &.layer2 {
+        z-index: 2;
+        width: 50%;
+        left: 50%;
+        visibility: visible;
+        opacity: 1;
+        bottom: 80px;
+        overflow: auto;
+
+        .vertical-align {
+          padding: 0 80px;
+          font-weight: 600;
+
+          h3 {
+            font-weight: 300;
+            color: white;
+            padding: 5px 0;
+            text-transform: uppercase;
+          }
+          a {
+            padding: 5px 0;
+            font-size: 18px;
+            line-height: 36px;
+            cursor: pointer;
+            position: relative;
+            color: white;
+
+          }
+
+          .back-btn {
+            padding: 5px 0;
+            font-size: 22px;
+            line-height: 36px;
+            color: grey;
+            margin-left: 10px;
+            cursor: pointer;
+
+          }
+
+        }
+
+
+      }
+    }
+  }
+
+  .menu-addons-holder {
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+    height: 100%;
+    margin: auto;
+    opacity: .8;
+    z-index: 2;
+
+    &.remove {
+      display: none;
+    }
+
+    .stories-menu {
+      top: 50%;
+      position: relative;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding-left: 170px;
+      padding-right: 100px;
+
+      .main-carousel {
+
+        .flickity-prev-next-button.next {
+          background: transparent linear-gradient(135deg, @page-color, #1b1b1b) 0 0 no-repeat;
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+          z-index: 10;
+          cursor: pointer;
+
+          &:hover {
+            background: @page-color;
+          }
+
+          &:after {
+            content: "";
+            position: absolute;
+            background: url('../img/icons/to-right.png');
+            top: 50%;
+            width: 18px;
+            left: 50%;
+            height: 18px;
+            transform: translate(-50%, -50%);
+
+
+          }
+        }
+
+        .flickity-prev-next-button.previous {
+          background: transparent linear-gradient(135deg, @page-color, #1b1b1b) 0 0 no-repeat;
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+          z-index: 10;
+          cursor: pointer;
+          margin-left: -80px;
+
+          &:hover {
+            background: @page-color;
+          }
+
+          &:after {
+            content: "";
+            position: absolute;
+            background: url('../img/icons/to-left.png');
+            top: 50%;
+            width: 18px;
+            left: 50%;
+            height: 18px;
+            transform: translate(-50%, -50%);
+
+
+          }
+        }
+
+        .flickity-button-icon {
+          display: none;
+        }
+
+        .flickity-viewport {
+          cursor: auto;
+          overflow: visible;
+        }
+
+        .flickity-page-dots {
+          display: none;
+        }
+      }
+
+      .story-item {
+        width: 296px;
+        margin-top: -100px;
+
+        .img-holder {
+          width: 296px;
+          height: 220px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px ;
+          }
+        }
+
+        .text-holder {
+          text-align: center;
+          color: white;
+          margin-top: 10px;
+
+          h4 {
+            font-size: 18px;
+            line-height: 36px;
+            font-weight: 600;
+          }
+
+          span {
+            font-size: 12px;
+            line-height: 20px;
+            letter-spacing: 2.4px;
+            text-transform: uppercase;
+            font-weight: 600;
+          }
+        }
+
+        .whole-link {
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          text-indent: -9999px;
+          z-index: 1;
+        }
+      }
+    }
+
+    .quicklinks {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 460px;
+      transform: translateX(-50%);
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        li {
+          width: 220px;
+          margin-bottom: 20px;
+
+          a {
+            display: block;
+            position: relative;
+            border: 2px solid @page-color;
+            border-radius: 25px;
+            background: transparent;
+            text-transform: uppercase;
+            color: #fff;
+            font-size: 12px;
+            letter-spacing: 2.4px;
+            line-height: 20px;
+            padding: 13px 20px;
+            text-align: center;
+            font-weight: 600;
+
+
+            &:hover {
+              background: @page-color;
+              background-size: cover;
+              color: white;
+              transition: all .4s linear;
+            }
+          }
+        }
+
+      }
+    }
+  }
+}

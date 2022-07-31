@@ -1,0 +1,367 @@
+.footer-holder {
+  position: relative;
+  padding-top: 80px;
+
+
+  .footer-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media all and (min-width: 992px) {
+      margin: 0 160px;
+      display: block;
+      flex-wrap: nowrap;
+
+    }
+
+    .section-header {
+      display: none;
+
+      @media all and (min-width: 992px) {
+        display: block;
+        float: left;
+        margin-bottom: 60px;
+      }
+
+      h3 {
+        font-size: 50px;
+        text-transform: uppercase;
+        background: -webkit-linear-gradient(@page-color, #1b1b1b);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+      }
+    }
+
+    .quicklinks {
+      position: relative;
+      width: 500px;
+      float: right;
+
+
+      ul {
+        column-count: 2;
+
+        li {
+          margin: 10px 0;
+          position: relative;
+          text-align: center;
+
+          a {
+            color: @page-color;
+            padding: 18px 5px;
+            background: white;
+            border-radius: 25px;
+            display: block;
+            position: relative;
+            text-transform: uppercase;
+            font-size: 14px;
+            line-height: 15px;
+            letter-spacing: 2.4px;
+            border: 2px solid @page-color;
+            font-weight: 600;
+
+            &:hover {
+              background: @page-color;
+              background-size: cover;
+              color: white;
+              transition: all .4s linear;
+            }
+
+            &.main-link {
+              color: white;
+              background: -webkit-linear-gradient(@page-color, #1b1b1b);
+              border: none;
+              padding: 20px 5px;
+
+              &:hover {
+                background: @page-color;
+                transition: all .4s linear;
+              }
+
+            }
+          }
+
+          &:first-child {
+            margin-top: 0;
+
+          }
+
+          &:nth-child(3) {
+            margin-bottom: 100px;
+          }
+        }
+
+      }
+    }
+
+    .concact-info {
+      order: -1;
+      display: flex;
+      float: left;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+
+      @media all and (min-width: 992px) {
+        margin-bottom: 20px;
+        flex-wrap: nowrap;
+        justify-content: normal;
+        text-align: left;
+
+      }
+
+      .info-section {
+        margin-right: 20px;
+
+        h4 {
+          font-size: 16px;
+          line-height: 28px;
+          letter-spacing: .5px;
+          text-transform: uppercase;
+        }
+
+        p {
+          margin: 5px 0;
+          font-size: 16px;
+          line-height: 28px;
+          font-weight: 600;
+
+          a {
+            color: @page-color;
+            font-weight: 600;
+          }
+        }
+      }
+
+    }
+
+    .socials {
+      clear: left;
+      width: 500px;
+
+      ul {
+
+        li {
+          display: inline-block;
+          margin-bottom: 10px;
+
+          &:first-child {
+            display: block;
+          }
+
+          .socials-tw {
+            display: block;
+            position: relative;
+            width: 50px;
+            height: 50px;
+            border: 2px solid #1DA1F2;
+            border-radius: 50%;
+            margin-right: 10px;
+            cursor: pointer;
+
+            &:before {
+              content: "";
+              background: url("../img/icons/footer-icons/ft-twitter.png") no-repeat;
+              position: absolute;
+              width: 20px;
+              height: 17px;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+
+          .socials-yt {
+            display: block;
+            position: relative;
+            width: 50px;
+            height: 50px;
+            border: 2px solid #FF0000;
+            border-radius: 50%;
+            margin-right: 10px;
+            cursor: pointer;
+
+            &:before {
+              content: "";
+              background: url("../img/icons/footer-icons/ft-youtube.png") no-repeat;
+              position: absolute;
+              width: 20px;
+              height: 14px;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+
+          .socials-fk {
+
+            display: block;
+            position: relative;
+            width: 50px;
+            height: 50px;
+            border: 2px solid #FF0084;
+            border-radius: 50%;
+            margin-right: 10px;
+            cursor: pointer;
+
+            &:before {
+              content: "";
+              background: url("../img/icons/footer-icons/ft-flickr.png") no-repeat;
+              position: absolute;
+              width: 20px;
+              height: 9px;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+
+          .socials-sd {
+            display: block;
+            position: relative;
+            width: 50px;
+            height: 50px;
+            border: 2px solid #FF8800;
+            border-radius: 50%;
+            margin-right: 10px;
+            cursor: pointer;
+
+            &:before {
+              content: "";
+              background: url("../img/icons/footer-icons/ft-soundcloud.png") no-repeat;
+              position: absolute;
+              width: 23px;
+              height: 10px;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+
+          .socials-insta {
+            display: block;
+            position: relative;
+            width: 50px;
+            height: 50px;
+            border: 2px solid #833AB4;
+            border-radius: 50%;
+            margin-right: 10px;
+            cursor: pointer;
+
+            &:before {
+              content: "";
+              background: url("../img/icons/footer-icons/ft-insta.png") no-repeat;
+              position: absolute;
+              width: 16px;
+              height: 16px;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+
+          .socials-fb {
+            display: block;
+            position: relative;
+            width: 50px;
+            height: 50px;
+            border: 2px solid #3B5998;
+            border-radius: 50%;
+            margin-right: 10px;
+            cursor: pointer;
+
+            &:before {
+              content: "";
+              background: url("../img/icons/footer-icons/ft-facebook.png") no-repeat;
+              position: absolute;
+              width: 9px;
+              height: 17px;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+
+            &:hover {
+              background: #3B5998;
+
+              &:before {
+                content: "";
+                background: url("../img/icons/footer-icons/ft-facebook-hover.png");
+                transition: all .2s linear;
+              }
+            }
+          }
+
+        }
+      }
+
+    }
+  }
+
+  .footer-tos {
+    padding: 100px 0 30px;
+
+    .footer-tos-wrapper {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 80px;
+
+      .tos {
+        li {
+          display: inline-block;
+
+          a {
+            color: #1b1b1b;
+            font-size: 15px;
+          }
+
+          &:before {
+            content: "|";
+            margin: 0 10px;
+          }
+
+          &:first-child {
+            &:before {
+              display: none;
+            }
+          }
+        }
+      }
+
+      .credits {
+        font-size: 15px;
+      }
+    }
+  }
+
+  .scroll-top {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: transparent linear-gradient(135deg, @page-color, #1b1b1b) 0 0 no-repeat;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    z-index: 10;
+    cursor: pointer;
+
+    &:hover {
+      background: @page-color;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      background: url('../img/icons/scroll-top.png');
+      top: 50%;
+      width: 18px;
+      left: 50%;
+      height: 18px;
+      transform: translate(-50%, -50%);
+
+
+    }
+  }
+}
+
